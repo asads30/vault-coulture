@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.css" integrity="sha512-GgUcFJ5lgRdt/8m5A0d0qEnsoi8cDoF0d6q+RirBPtL423Qsj5cI9OxQ5hWvPi5jjvTLM/YhaaFuIeWCLi6lyQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"> -->
     
     
     <title>vault-couture</title>
@@ -764,18 +761,190 @@
                     Book your collection
                 </h4>
                 <div class="input__group">
-                    <!-- <label for="modal_input1" class="input__group-label">Postcode</label> -->
                     <input id="modal_input1" class="input__group-input" type="text" placeholder="Postcode">
                 </div>
                 <div class="input__group">
-                    <!-- <label for="modal_input2" class="input__group-label">Address</label> -->
                     <input id="modal_input2" class="input__group-input" type="text" placeholder="Address">
                 </div>
                 <div class="modal__select-dateTime">
-                    <!-- <h4 class="modal-title2">Select date and time</h4> -->
                     <div class="modal__select-date right-arrow bottom-border">
                         <label for="datepicker">Select date</label>
-                        <input type="text" id="datepicker" placeholder="5 August 2021">
+                        <input type="text" id="datepicker1" placeholder="5 August 2021">
+                        <div id="datepicker__box" class="datepicker__box">
+                            <span id="datepicker__box-close" class="datepicker__box-close">&times;</span>
+                            <div class="datepicker__month">
+                                <button type="button">
+                                    <img src="img/chevron-leftC.png" alt="">
+                                </button>
+                                August 2021
+                                <button type="button">
+                                    <img src="img/chevron-rightC.png" alt="">
+                                </button>
+                            </div>
+                            <div class="datepicker__calendar">
+                                <div class="dCalendar__week-names">
+                                    <span class="week__mon">Mon</span>
+                                    <span class="week__mon">Tue</span>
+                                    <span class="week__mon">Wed</span>
+                                    <span class="week__mon">Thu</span>
+                                    <span class="week__mon">Fri</span>
+                                    <span class="week__mon">Sat</span>
+                                    <span class="week__mon">Sun</span>
+                                </div>
+                                <div class="dCalendar__month-numbers">
+                                    <div class="dCalendar__row">
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input1" name="dateP__input">
+                                            <label for="dateP__input1" class="other__months">31</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input2" name="dateP__input">
+                                            <label for="dateP__input2">1</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input3" name="dateP__input">
+                                            <label for="dateP__input3">2</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input4" name="dateP__input">
+                                            <label for="dateP__input4">3</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input5" name="dateP__input">
+                                            <label for="dateP__input5">4</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input6" name="dateP__input">
+                                            <label for="dateP__input6">5</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input7" name="dateP__input">
+                                            <label for="dateP__input7">6</label>
+                                        </div>
+                                    </div>
+                                    <div class="dCalendar__row">
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input8" name="dateP__input">
+                                            <label for="dateP__input8">7</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input9" name="dateP__input">
+                                            <label for="dateP__input9">8</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input10" name="dateP__input">
+                                            <label for="dateP__input10">9</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input11" name="dateP__input">
+                                            <label for="dateP__input11">10</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input12" name="dateP__input">
+                                            <label for="dateP__input12">11</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input13" name="dateP__input">
+                                            <label for="dateP__input13">12</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input14" name="dateP__input">
+                                            <label for="dateP__input14">13</label>
+                                        </div>
+                                    </div>
+                                    <div class="dCalendar__row">
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input15" name="dateP__input">
+                                            <label for="dateP__input15">14</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input16" name="dateP__input">
+                                            <label for="dateP__input16">15</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input17" name="dateP__input">
+                                            <label for="dateP__input17">16</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input18" name="dateP__input">
+                                            <label for="dateP__input18">17</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input19" name="dateP__input">
+                                            <label for="dateP__input19">18</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input20" name="dateP__input">
+                                            <label for="dateP__input20">19</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input21" name="dateP__input">
+                                            <label for="dateP__input21">20</label>
+                                        </div>
+                                    </div>
+                                    <div class="dCalendar__row">
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input22" name="dateP__input">
+                                            <label for="dateP__input22">21</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input23" name="dateP__input">
+                                            <label for="dateP__input23">22</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input24" name="dateP__input">
+                                            <label for="dateP__input24">23</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input25" name="dateP__input">
+                                            <label for="dateP__input25">24</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input26" name="dateP__input">
+                                            <label for="dateP__input26">25</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input27" name="dateP__input">
+                                            <label for="dateP__input27">26</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input28" name="dateP__input">
+                                            <label for="dateP__input28">27</label>
+                                        </div>
+                                    </div>
+                                    <div class="dCalendar__row">
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input29" name="dateP__input">
+                                            <label for="dateP__input29">28</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input30" name="dateP__input">
+                                            <label for="dateP__input30">29</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input31" name="dateP__input">
+                                            <label for="dateP__input31">30</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input32" name="dateP__input">
+                                            <label for="dateP__input32">31</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input33" name="dateP__input">
+                                            <label for="dateP__input33" class="other__months">1</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input34" name="dateP__input">
+                                            <label for="dateP__input34" class="other__months">2</label>
+                                        </div>
+                                        <div class="datep__inputG">
+                                            <input type="radio" id="dateP__input35" name="dateP__input">
+                                            <label for="dateP__input35" class="other__months">3</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal__select-time right-arrow">
                         <label for="timepicker">Select time</label>
@@ -899,13 +1068,13 @@
                 </div>
                 <div class="input__group">
                     <label for="modal_input7" class="input__group-label">Password</label>
-                    <span>Password can’t be less than 12 symbols. Must contain letters and numbers with special symbols.</span>
+                    <span  class="input__group-span1">Password can’t be less than 12 symbols. Must contain letters and numbers with special symbols.</span>
                     <input id="modal_input7" class="input__group-input" type="password" placeholder="Password">
                     <a href="#" class="password-control1"></a>
                 </div>
                 <div class="input__group">
                     <label for="modal_input8" class="input__group-label">Repeat password</label>
-                    <span>Please, repeat password to avoid mistakes.</span>
+                    <span  class="input__group-span1">Please, repeat password to avoid mistakes.</span>
                     <input id="modal_input8" class="input__group-input" type="password" placeholder="Repeat password">
                     <a href="#" class="password-control2"></a>
                 </div>
@@ -997,6 +1166,18 @@
     $('#timepicker__box-close').on('click', () => {
         $('#timepicker__box').toggleClass('show');
     })
+
+    
+
+
+    $('#datepicker1').on('click', () => {
+        $('#datepicker__box').toggleClass('show');
+    })
+
+    $('#datepicker__box-close').on('click', () => {
+        $('#datepicker__box').toggleClass('show');
+    })
+
 </script>
 <script>
     const prevBtns = document.querySelectorAll(".btn-prev1");
@@ -1114,8 +1295,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.js" integrity="sha512-WHnaxy6FscGMvbIB5EgmjW71v5BCQyz5kQTcZ5iMxann3HczLlBHH5PQk7030XmmK5siar66qzY+EJxKHZTPEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
     
     var body = $('#body');
@@ -1187,8 +1366,6 @@
         modal.classList.remove('active');
         overlayModal.classList.remove('active');
     }
-    // $('#timepicker').timepicker();
-    $("#datepicker").datepicker();
     </script>
     <script src="js/script.min.js"></script>
 </body>

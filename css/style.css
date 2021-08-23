@@ -1544,8 +1544,8 @@ body {
 .timepicker__box {
   opacity: 0;
   visibility: hidden;
-  width: 31.6rem;
-  min-height: 35.3rem;
+  width: 30rem;
+  min-height: 32rem;
   background-color: #fff;
   position: absolute;
   top: 0;
@@ -1553,7 +1553,7 @@ body {
   -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
-  padding: 2.3rem 2rem 1.6rem;
+  padding: 1.5rem;
   z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1562,7 +1562,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 1.6rem;
+  row-gap: 12px;
   -webkit-transition: opacity 0.4s ease;
   -o-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
@@ -1622,7 +1622,7 @@ body {
 }
 
 .timepicker__box-input-group label {
-  padding: 1rem 1.6rem;
+  padding: 8px 15px;
   cursor: pointer;
 }
 
@@ -1641,7 +1641,7 @@ body {
 
 .timepicker__box-buttons button {
   border-radius: 2px;
-  height: 4.8rem;
+  height: 4rem;
 }
 
 .timepicker__box-buttons button.btn.btn-white2 {
@@ -1657,9 +1657,135 @@ body {
 .timepicker__box-close {
   position: absolute;
   right: 1.6rem;
-  top: 0.6rem;
+  top: -5px;
   font-size: 4rem;
   cursor: pointer;
+}
+
+.datepicker__box {
+  width: 32rem;
+  min-height: 29rem;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  z-index: 5;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 12px;
+  -webkit-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+.datepicker__box.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.datepicker__box-close {
+  position: absolute;
+  right: 1.6rem;
+  top: -5px;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.datepicker__month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.datepicker__month button {
+  background: transparent;
+}
+
+.datepicker__calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dCalendar__week-names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.week__mon {
+  color: #858585;
+  text-align: center;
+  -ms-flex-preferred-size: calc(1 / 7 * 100%);
+      flex-basis: calc(1 / 7 * 100%);
+  width: calc(1 / 7 * 100%);
+}
+
+.dCalendar__month-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dCalendar__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 12px;
+}
+
+.datep__inputG {
+  text-align: center;
+  -ms-flex-preferred-size: calc(1 / 7 * 100%);
+      flex-basis: calc(1 / 7 * 100%);
+  width: calc(1 / 7 * 100%);
+}
+
+.datep__inputG input {
+  display: none;
+}
+
+.datep__inputG input:checked + label {
+  background-color: #000;
+  color: #fff;
+}
+
+.datep__inputG label {
+  font-size: 15px;
+  padding: 6px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+}
+
+.datep__inputG label:hover {
+  background-color: #f2f2f2;
+}
+
+.other__months {
+  color: #858585;
 }
 
 .burger__btn {
@@ -1772,11 +1898,11 @@ body {
   -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   z-index: 500;
-  width: 60rem;
+  width: 50rem;
   background-color: #fff;
-  padding: 1rem 2.4rem;
   overflow: auto;
-  max-height: 79rem;
+  padding: 1rem 2.4rem;
+  max-height: 60rem;
 }
 
 .modal.active {
@@ -1801,8 +1927,8 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   gap: 5.5rem;
-  top: 2.4rem;
-  right: 2.4rem;
+  top: 1.5rem;
+  right: 2.5rem;
 }
 
 .modal .total__summ span {
@@ -1810,10 +1936,10 @@ body {
 }
 
 .modal__footer a {
-  width: 29rem;
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
-  font-size: 1.6rem;
+  width: 22rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -1840,7 +1966,8 @@ body.lock {
 
 .close-button-1 {
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  left: 1.5rem;
   position: absolute;
   top: 2rem;
 }
@@ -1850,23 +1977,27 @@ body.lock {
   font-size: 5rem;
 }
 
+.input__group-span1 {
+  font-size: 12px;
+}
+
 .modal__tab-title {
-  font-size: 2.2rem;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 2rem;
-  padding-left: 5rem;
+  padding-left: 3rem;
   padding-top: 1rem;
 }
 
 .modal__tab .input__group {
-  margin-bottom: 1.6rem;
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .modal__tab .input__group .password-control1,
 .modal__tab .input__group .password-control2 {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   right: 10px;
   display: inline-block;
   width: 30px;
@@ -1884,7 +2015,8 @@ body.lock {
 }
 
 .input__checkbox {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
+  font-size: 14px;
 }
 
 .input__checkbox label {
@@ -1893,13 +2025,13 @@ body.lock {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
 }
 
 .input__checkbox label::before {
   content: "";
-  width: 2rem;
-  height: 2rem;
+  width: 16px;
+  height: 16px;
   background-color: #f2f2f2;
   border-radius: 3px;
   position: absolute;
@@ -1940,15 +2072,15 @@ body.lock {
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
+  font-size: 14px;
   position: relative;
 }
 
 .modal__select-date input,
 .modal__select-time input {
-  font-size: inherit;
   width: 100%;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
   padding-right: 2rem;
   text-align: right;
 }
@@ -1989,6 +2121,7 @@ body.lock {
   padding-bottom: 1rem;
   background-color: #f2f2f2;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .modal__radio-inputs input {
@@ -2018,8 +2151,8 @@ body.lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2.8rem;
+  height: 2.8rem;
   border-radius: 50%;
   background-color: #f2f2f2;
 }
@@ -2079,9 +2212,9 @@ body.lock {
 
 .modal__count-item a {
   position: relative;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 2.5rem;
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
   text-align: center;
@@ -2094,14 +2227,12 @@ body.lock {
 
 .modal-title2 {
   font-weight: 600;
-  line-height: 22px;
-  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
 .total__inf {
   background-color: #f2f2f2;
-  padding: 2rem;
+  padding: 15px;
   border-radius: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2110,7 +2241,8 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2.8rem;
+  gap: 5px;
+  font-size: 12px;
 }
 
 .total__inf-title {
@@ -2153,7 +2285,7 @@ body.lock {
 }
 
 .payment__block {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2162,7 +2294,7 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1.2rem;
+  gap: 8px;
   padding: 0 7.6rem;
 }
 
@@ -2198,7 +2330,7 @@ body.lock {
 
 .payment__block button.btn,
 .payment__block a.btn {
-  padding: 1.5rem 0;
+  padding: 1rem;
 }
 
 .payment__block .other__bcards {
@@ -2724,7 +2856,7 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1rem;
+  gap: 6px;
 }
 
 .input__group-label {
@@ -2732,10 +2864,10 @@ body.lock {
 }
 
 .input__group-input {
-  padding: 1.4rem 1.6rem;
+  padding: 1rem 1.5rem;
   color: #000;
   line-height: 20px;
-  font-size: inherit;
+  font-size: 14px;
   background-color: #f2f2f2;
 }
 
@@ -4317,6 +4449,14 @@ body.lock {
 
   .vault__archive-bg-image {
     padding-top: 6rem;
+  }
+
+  .timepicker__box {
+    right: -2rem;
+  }
+
+  .datepicker__box {
+    right: -2rem;
   }
 
   .modal.active {
