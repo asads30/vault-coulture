@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    
+    
+    
     <title>vault-couture</title>
 </head>
 <body id="body">
@@ -986,81 +990,81 @@
     </div>  
 
    
-<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 
 <script>
 
-    var body = $('#body');
-    var modalClose1 = $('#modal-close1');
+var body = $('#body');
+var modalClose1 = $('#modal-close1');
 
-    var openModalBtn = $('#open-modal');
+var openModalBtn = $('#open-modal');
 
-    openModalBtn.on('click', () => {
-        $('#body').toggleClass('lock');
-    })    
+openModalBtn.on('click', () => {
+    $('#body').toggleClass('lock');
+})    
 
 
-    modalClose1.on('click', () => {
-        $('#body').toggleClass('lock');
+modalClose1.on('click', () => {
+    $('#body').toggleClass('lock');
+})
+
+
+
+
+
+var firstnextbtn = $('#firstnextbtn');
+firstnextbtn.on('click', () => {
+    modalClose1.css('display', 'none');
+})
+var firstBackbtn = $('#firstBackbtn');
+firstBackbtn.on('click', () => {    
+    modalClose1.css('display', 'flex');
+})
+
+
+var openModalBtns = document.querySelectorAll('[data-modal-target]');
+var closeModalBtns = document.querySelectorAll('[data-close-button]');
+var overlayModal = document.getElementById('modal-overlay');
+
+overlayModal.addEventListener('click', () => {
+    $('#body').toggleClass('lock');
+})
+
+
+overlayModal.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active');    
+    modals.forEach(modal => {
+        closeModal(modal)
     })
+    
+})
 
-
-
-
-
-    var firstnextbtn = $('#firstnextbtn');
-    firstnextbtn.on('click', () => {
-        modalClose1.css('display', 'none');
+openModalBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
     })
-    var firstBackbtn = $('#firstBackbtn');
-    firstBackbtn.on('click', () => {    
-        modalClose1.css('display', 'flex');
+})
+
+closeModalBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        closeModal(modal);
     })
+})
 
-
-    var openModalBtns = document.querySelectorAll('[data-modal-target]');
-    var closeModalBtns = document.querySelectorAll('[data-close-button]');
-    var overlayModal = document.getElementById('modal-overlay');
-
-    overlayModal.addEventListener('click', () => {
-        $('#body').toggleClass('lock');
-    })
-
-
-    overlayModal.addEventListener('click', () => {
-        const modals = document.querySelectorAll('.modal.active');    
-        modals.forEach(modal => {
-            closeModal(modal)
-        })
-        
-    })
-
-    openModalBtns.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = document.querySelector(button.dataset.modalTarget);
-            openModal(modal);
-        })
-    })
-
-    closeModalBtns.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = button.closest('.modal');
-            closeModal(modal);
-        })
-    })
-
-    function openModal(modal) {
-        if (modal == null ) return
-        modal.classList.add('active');
-        overlayModal.classList.add('active');
-    }
-    function closeModal(modal) {
-        if (modal == null ) return
-        modal.classList.remove('active');
-        overlayModal.classList.remove('active');
-    }
+function openModal(modal) {
+    if (modal == null ) return
+    modal.classList.add('active');
+    overlayModal.classList.add('active');
+}
+function closeModal(modal) {
+    if (modal == null ) return
+    modal.classList.remove('active');
+    overlayModal.classList.remove('active');
+}
 </script>
 
 <script>
